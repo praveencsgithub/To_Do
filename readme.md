@@ -15,6 +15,6 @@
 
 # Time taken to finish this project is 4 hours.
 
-[Live link]()
+[Live link](https://admirable-sable-f31103.netlify.app/)
 
 
