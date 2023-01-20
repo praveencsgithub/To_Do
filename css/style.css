@@ -1,0 +1,138 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --grey: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Fira sans", "sans serif";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--dark);
+  color: #fff;
+}
+
+header {
+  padding: 32px 16px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+#new-todo-form {
+  display: flex;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+#new-todo-input {
+  flex: 1 1 0%;
+  background-color: var(--darker);
+  padding: 16px;
+  border-radius: 16px;
+  margin-right: 16px;
+  color: var(--light);
+  font-size: 20px;
+}
+#new-todo-input::placeholder {
+  color: var(--grey);
+}
+#new-todo-submit {
+  color: var(--pink);
+  font-size: 20px;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip : text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-todo-submit:hover {
+  opacity: 0.8;
+}
+#new-todo-submit:active {
+  opacity: 0.6;
+}
+main {
+  flex: 1 1 0%;
+  /* padding: 32px 16px; */
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.todo-list {
+  padding: 16px;
+}
+.todo-list h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+#todos .todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+#todos .todo .content {
+  flex: 1 1 0%;
+}
+#todos .todo .content .text {
+  color: var(--light);
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+#todos .todo .content .text:not(:read-only) {
+  color: var(--pink);
+}
+#todos .todo .actions {
+  display: flex;
+  margin: 0 -8px;
+}
+.todo .actions button {
+  cursor: pointer;
+  margin: 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.todo .actions button:hover {
+  opacity: 0.8;
+}
+.todo .actions button:active {
+  opacity: 0.6;
+}
+.todo .actions .edit {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.todo .actions .delete {
+  color: crimson;
+}
